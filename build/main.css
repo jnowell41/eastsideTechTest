@@ -1,0 +1,499 @@
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+body .globalHeader {
+  position: fixed;
+  margin-top: -100px;
+  z-index: 1000;
+  background-color: white;
+  height: 100px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+}
+body .globalHeader .navContainer {
+  border-top: 1px solid #dfdede;
+  border-bottom: 1px solid #dfdede;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .globalHeader .navContainer #logo {
+  height: 95%;
+  overflow: hidden;
+}
+body .globalHeader .navContainer #logo img {
+  height: 90%;
+}
+body .globalHeader .navContainer #menuItems {
+  list-style-type: none;
+  width: auto;
+  display: inline-block;
+  padding: 0;
+}
+body .globalHeader .navContainer #menuItems li {
+  display: inline-block;
+  width: 80px;
+  list-style-type: none;
+  text-align: center;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+}
+body .globalHeader .navContainer #menuItems li:hover {
+  cursor: pointer;
+  border-bottom: 2px solid #dfdede;
+}
+body .globalHeader .navContainer #menuItems li a {
+  text-decoration: none;
+  color: black;
+}
+body .globalHeader .navContainer #userObjects {
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+}
+body .globalHeader .navContainer #userObjects .fa-clipboard, body .globalHeader .navContainer #userObjects .fa-user {
+  font-size: 1.2em;
+  margin: 0 10px 0 10px;
+}
+body .globalHeader .navContainer #userObjects .input-group {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+body .globalHeader .navContainer #userObjects .input-group .form-control {
+  height: 100%;
+  width: 150px;
+  border: 1px solid #dfdede;
+  border-right: none;
+  font-size: 1em;
+  padding-left: 10px;
+}
+body .globalHeader .navContainer #userObjects .input-group .input-group-append {
+  border: 1px solid #dfdede;
+  height: 100%;
+  border-left: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .globalHeader .navContainer #userObjects .input-group .input-group-append .input-group-text {
+  font-size: 1.2em;
+  padding: 10px;
+}
+body main {
+  margin: 0;
+  margin-top: 100px;
+}
+body main .bannerContainer {
+  width: 100vw;
+  margin: 0;
+  transition: 0.2s;
+}
+body main .bannerContainer #headerContainer {
+  width: 100%;
+  height: 45px;
+  background-color: #b12121;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .bannerContainer #headerContainer h1 {
+  font-size: 0.7em;
+  color: white;
+}
+body main .bannerContainer #headerContainer h1 a {
+  text-decoration: none;
+  font-size: 0.6em;
+  color: white;
+}
+body main .bannerContainer #bannerContent .imageContainer {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  background-image: url("https://d.newsweek.com/en/full/1501508/leopard-kruger-national-park.jpg?w=1600&h=1200&l=50&t=40&q=88&f=702785300b24d34554f6f27af7f2a20f");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+body main .bannerContainer #bannerContent .imageContainer h1 {
+  color: white;
+  margin-right: 200px;
+}
+body main .bannerContainer #bannerContent .imageContainer button {
+  width: 120px;
+  height: 40px;
+  color: black;
+  font-weight: 800;
+  font-size: 0.6em;
+  margin-right: 200px;
+}
+body main .bannerContainer #bannerContent .imageContainer button:hover {
+  cursor: pointer;
+}
+body main .featuredItemsContainer {
+  width: 100%;
+  height: auto;
+  padding: 100px 0 100px 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.2s;
+}
+body main .featuredItemsContainer .itemTitlesContainer {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+body main .featuredItemsContainer .itemTitlesContainer h1 {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+body main .featuredItemsContainer .itemTitlesContainer p {
+  font-size: 0.8em;
+}
+body main .featuredItemsContainer .productContainer {
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body main .featuredItemsContainer .productContainer .featuredItem {
+  height: 425px;
+  width: 20%;
+  min-width: 225px;
+  display: grid;
+  grid-template: "image" "star" "title" "info";
+  grid-template-rows: 70% 5% 10% 15%;
+  grid-template-columns: 100%;
+  overflow: hidden;
+  margin: 10px;
+  opacity: 1;
+}
+body main .featuredItemsContainer .productContainer .featuredItem .featuredItemImg {
+  grid-area: image;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 97%;
+  border-bottom: 1px grey solid;
+}
+body main .featuredItemsContainer .productContainer .featuredItem .featuredItemImg img {
+  height: 100%;
+  margin-bottom: 20px;
+}
+body main .featuredItemsContainer .productContainer .featuredItem #starRating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  grid-area: star;
+  padding: 5px 0 5px 0;
+  font-size: 0.6em;
+}
+body main .featuredItemsContainer .productContainer .featuredItem #starRating .fa-star {
+  margin: 0 2px 0 2px;
+}
+body main .featuredItemsContainer .productContainer .featuredItem h1 {
+  font-size: 0.6em;
+  font-weight: 600;
+  grid-area: title;
+  margin: 0;
+}
+body main .featuredItemsContainer .productContainer .featuredItem p {
+  font-size: 0.6em;
+  grid-area: info;
+  margin: 0;
+}
+body main .featuredItemsContainer .productContainer .toggleDisplay {
+  opacity: 0;
+}
+body main .rangesContainer {
+  width: 100%;
+  background-color: #dfdede;
+  height: auto;
+  padding: 100px 0 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transition: 0.2s;
+}
+body main .rangesContainer h1 {
+  font-size: 1.2em;
+  height: 50px;
+  width: 90%;
+}
+body main .rangesContainer .rangesItemContainer {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+}
+body main .rangesContainer .rangesItemContainer .rangesItem {
+  width: 32%;
+  min-width: 300px;
+  height: 100%;
+  min-height: 250px;
+  overflow: hidden;
+  padding: 15px;
+}
+body main .rangesContainer .rangesItemContainer .rangesItem img {
+  height: 250px;
+}
+body main .userContainer {
+  height: auto;
+  padding: 100px 0 100px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transition: 0.2s;
+}
+body main .userContainer h1 {
+  font-size: 1.2em;
+  font-weight: 600;
+  width: 90%;
+}
+body main .userContainer .inputOutputContainer {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
+}
+body main .userContainer .inputOutputContainer form {
+  width: 300px;
+}
+body main .userContainer .inputOutputContainer form .userForm {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+body main .userContainer .inputOutputContainer form .userForm input[type=text], body main .userContainer .inputOutputContainer form .userForm input[type=URL] {
+  height: 40px;
+  width: 200px;
+  color: #dfdede;
+  border: 1px solid #dfdede;
+}
+body main .userContainer .inputOutputContainer form .userForm input[type=text]::placeholder, body main .userContainer .inputOutputContainer form .userForm input[type=URL]::placeholder {
+  color: #dfdede;
+  padding-left: 10px;
+}
+body main .userContainer .inputOutputContainer form .userForm input[type=file] {
+  display: none;
+}
+body main .userContainer .inputOutputContainer form .userForm button {
+  width: 120px;
+  height: 40px;
+  color: black;
+  font-weight: 800;
+  font-size: 0.6em;
+  margin-right: 200px;
+}
+body main .userContainer .inputOutputContainer form .userForm button:hover {
+  cursor: pointer;
+}
+body main .userContainer .inputOutputContainer form .userForm .custom-file-upload {
+  width: 200px;
+  height: 40px;
+  display: inline-block;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #dfdede;
+  font-size: 0.7em;
+  color: #dfdede;
+  padding-left: 10px;
+}
+body main .userContainer .inputOutputContainer .userOutput {
+  min-width: 300px;
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+body main .userContainer .inputOutputContainer .userOutput .blogPost {
+  min-width: 150px;
+  height: 280px;
+  display: flex;
+  margin: 0 10px 10px 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+body main .userContainer .inputOutputContainer .userOutput img {
+  width: 100px;
+}
+body main .userContainer .inputOutputContainer .userOutput h1 {
+  text-align: center;
+}
+body footer {
+  width: 100vw;
+  height: 300px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 0;
+}
+body footer .footerContainer {
+  width: 60%;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+body footer .footerContainer .menuContainer {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+body footer .footerContainer .menuContainer .hyperlinksContainer {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+}
+body footer .footerContainer .menuContainer .hyperlinksContainer .linksWithTitleContainer h1 {
+  font-size: 0.8em;
+  font-weight: 700;
+  color: #4d4949;
+  padding-left: 5px;
+}
+body footer .footerContainer .menuContainer .hyperlinksContainer .linksWithTitleContainer .linksContainer {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: #4d4949;
+}
+body footer .footerContainer .menuContainer .hyperlinksContainer .linksWithTitleContainer .linksContainer li {
+  font-size: 0.7em;
+  margin: 0;
+  font-weight: 600;
+  padding: 5px 0 5px 0;
+  padding-left: 5px;
+  border-left: 2px solid transparent;
+}
+body footer .footerContainer .menuContainer .hyperlinksContainer .linksWithTitleContainer .linksContainer li:hover {
+  border-left: 2px solid white;
+  cursor: pointer;
+  color: white;
+}
+body footer .footerContainer .menuContainer .hyperlinksContainer .linksWithTitleContainer .linksContainer li a {
+  text-decoration: none;
+  color: #4d4949;
+}
+body footer .footerContainer .menuContainer .hyperlinksContainer .linksWithTitleContainer .linksContainer li a:hover {
+  color: white;
+  cursor: pointer;
+}
+body footer .footerContainer .menuContainer .hyperlinksContainer .informationWithTitleContainer h1 {
+  font-size: 0.8em;
+  font-size: 700;
+  color: #4d4949;
+  padding-left: 5px;
+}
+body footer .footerContainer .menuContainer .hyperlinksContainer .informationWithTitleContainer .informationContainer {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: #4d4949;
+}
+body footer .footerContainer .menuContainer .hyperlinksContainer .informationWithTitleContainer .informationContainer li {
+  font-size: 0.7em;
+  font-weight: 600;
+  margin: 0;
+  padding: 5px 0 5px 0;
+  padding-left: 5px;
+  border-left: 2px solid transparent;
+}
+body footer .footerContainer .menuContainer .hyperlinksContainer .informationWithTitleContainer .informationContainer li:hover {
+  border-left: 2px solid white;
+  cursor: pointer;
+  color: white;
+}
+body footer .footerContainer .menuContainer .iconsContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 125px;
+  font-size: 1.2em;
+  color: #4d4949;
+}
+body footer .footerContainer .menuContainer .iconsContainer .fa-facebook:hover, body footer .footerContainer .menuContainer .iconsContainer .fa-instagram:hover, body footer .footerContainer .menuContainer .iconsContainer .fa-twitter:hover, body footer .footerContainer .menuContainer .iconsContainer .fa-youtube:hover {
+  cursor: pointer;
+  color: white;
+}
+body footer .footerContainer .copyrightContainer {
+  width: 100%;
+  height: 25px;
+  border-top: 1px solid #4d4949;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+body footer .footerContainer .copyrightContainer .copyright {
+  width: 250px;
+  margin-top: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.6em;
+}
+body footer .footerContainer .copyrightContainer .copyright img {
+  height: 10px;
+}
+body footer .footerContainer .copyrightContainer .copyright p {
+  padding: 0;
+  color: #4d4949;
+  width: auto;
+}
+body footer .footerContainer .copyrightContainer .termsAndConditionsContainer {
+  width: auto;
+  list-style-type: none;
+  height: auto;
+  color: #4d4949;
+  font-size: 0.6em;
+}
+body footer .footerContainer .copyrightContainer .termsAndConditionsContainer li {
+  display: inline-block;
+  padding: 0 5px 0 5px;
+  border-bottom: 1px solid transparent;
+}
+body footer .footerContainer .copyrightContainer .termsAndConditionsContainer li:hover {
+  cursor: pointer;
+  border-bottom: 1px solid #4d4949;
+}
+
+/*# sourceMappingURL=main.css.map */
